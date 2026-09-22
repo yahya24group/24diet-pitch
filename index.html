@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>24 DIET — B2B Meal Partnership</title>
-  <meta name="description" content="24 DIET general B2B meal partnership pitch with progressive pricing and bilingual English/Arabic presentation." />
+  <meta name="description" content="24 DIET general B2B meal partnership pitch. Delivered meals of 150g carbohydrate and 100g protein, optional protein upgrades, progressive pricing, bilingual English/Arabic." />
   <style>
     :root{
       --ink:#111318;
@@ -382,6 +382,16 @@
     td{font-size:13px}
     tbody tr:last-child td{border-bottom:0}
 
+    tfoot td{
+      border-top:1px solid var(--line);
+      border-bottom:0;
+      background:#F7F8FA;
+      color:#475467;
+      font-size:11px;
+      font-weight:700;
+      line-height:1.55;
+    }
+
     .price{
       font-size:20px;
       font-weight:950;
@@ -476,13 +486,6 @@
     }
 
     .quick-buttons button:hover{background:#2A3F65}
-
-    .delivery-row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin:14px 0 18px;
-    }
 
     .calc-grid{
       display:grid;
@@ -856,6 +859,7 @@
       .page{padding:10px}
       .topbar{align-items:flex-start;flex-direction:column;padding:12px}
       .top-actions{justify-content:flex-start;width:100%}
+      .top-actions .print-btn{width:auto;min-height:40px}
       .nav{justify-content:flex-start}
       .nav a,.lang-switch button,.quick-buttons button{min-height:40px;display:inline-flex;align-items:center;font-size:13px}
       .lang-switch{margin-left:auto}
@@ -868,7 +872,7 @@
       .hero-main p,.section-head p,.offer-card p,.step p,.hero-note,.talk-point,.delivery-note,td{font-size:14px}
       .section{padding:18px 14px}
       .section-head h2{font-size:24px}
-      .offer-grid,.steps,.economics,.talk-points,.delivery-row{grid-template-columns:1fr}
+      .offer-grid,.steps,.economics,.talk-points{grid-template-columns:1fr}
       .industry-grid,.calc-grid{grid-template-columns:1fr 1fr}
       .industry{min-height:84px;padding:14px}
       .industry strong{font-size:14px}
@@ -891,7 +895,8 @@
     @media print{
       body{background:#fff}
       .page{max-width:none;padding:0}
-      .topbar,.nav,.print-btn,.quick-buttons,.lang-switch{display:none !important}
+      .nav,.print-btn,.quick-buttons,.lang-switch{display:none !important}
+      .topbar{border:0;padding:0 0 4px;margin-bottom:12px;border-bottom:1px solid #C8CDD6;border-radius:0}
       .hero,.section{break-inside:avoid}
       .section{border-color:#C8CDD6}
       .hero-main,.hero-card,.rules,.econ-card,.calc,.industry{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -915,6 +920,7 @@
           <a href="#pricing" data-i18n="navPricing">Pricing</a>
           <a href="#offer" data-i18n="navOffer">Offer</a>
         </nav>
+        <button class="print-btn" type="button" onclick="window.print()" data-i18n="pdfBtn">Download PDF</button>
         <div class="lang-switch" aria-label="Language switch">
           <button type="button" id="langEn" class="active">EN</button>
           <button type="button" id="langAr">العربية</button>
@@ -929,14 +935,15 @@
           <h1 data-i18n="heroTitle">Start small.<br>Feed your team.<br>Grow when it works.</h1>
           <p data-i18n="heroCopy">
             A simple daily meal program for companies, offices, gyms, clinics, academies, workshops, retail teams and other businesses.
-            Low starting commitment, predictable monthly spend, and better pricing as real volume grows.
+            Low starting commitment, predictable monthly spend, free delivery, and better pricing as real volume grows.
           </p>
         </div>
         <div class="hero-tags">
           <span data-i18n="tag1">10 meals/day minimum</span>
           <span data-i18n="tag2">26 service days</span>
           <span data-i18n="tag3">Progressive pricing</span>
-          <span data-i18n="tag4">Pickup free</span>
+          <span data-i18n="tag4">Free delivery</span>
+          <span data-i18n="tag5">150g carbs · 100g protein</span>
         </div>
       </div>
 
@@ -952,9 +959,9 @@
         <div class="hero-card green">
           <div>
             <div class="kicker" data-i18n="startPrice">Starting price</div>
-            <div class="hero-number">AED 16</div>
+            <div class="hero-number">AED 21</div>
           </div>
-          <div class="hero-note" data-i18n="startPriceNote">Per meal for the first 10 meals. Additional volume receives progressively better pricing.</div>
+          <div class="hero-note" data-i18n="startPriceNote">Per meal for the first 10 meals, daily delivery included. Additional volume receives progressively better pricing.</div>
         </div>
       </div>
     </section>
@@ -1022,7 +1029,7 @@
     <section class="section" id="pricing">
       <div class="section-head">
         <h2 data-i18n="pricingTitle">Progressive pricing</h2>
-        <p data-i18n="pricingIntro">You get rewarded for growth. Every additional meal is priced lower as your daily volume rises.</p>
+        <p data-i18n="pricingIntro">You get rewarded for growth. Every additional meal is priced lower as your daily volume rises. Delivery is included in every price below — the first 10 meals carry the daily delivery run, which is why the first step down is the largest.</p>
       </div>
 
       <div class="pricing-wrap">
@@ -1039,35 +1046,40 @@
               <tr>
                 <td><span class="tier-dot">1</span><span data-i18n="tier1Name">Base</span></td>
                 <td data-i18n="tier1Applied">First 10 meals</td>
-                <td class="price">AED 16.00</td>
+                <td class="price">AED 21.00</td>
               </tr>
               <tr>
                 <td><span class="tier-dot">2</span><span data-i18n="tier2Name">Growth</span></td>
                 <td data-i18n="tier2Applied">Meals 11–20</td>
-                <td class="price">AED 15.50</td>
+                <td class="price">AED 18.50</td>
               </tr>
               <tr>
                 <td><span class="tier-dot">3</span><span data-i18n="tier3Name">Team</span></td>
                 <td data-i18n="tier3Applied">Meals 21–30</td>
-                <td class="price">AED 15.00</td>
+                <td class="price">AED 17.50</td>
               </tr>
               <tr>
                 <td><span class="tier-dot">4</span><span data-i18n="tier4Name">Expanded</span></td>
                 <td data-i18n="tier4Applied">Meals 31–40</td>
-                <td class="price">AED 14.50</td>
+                <td class="price">AED 16.50</td>
               </tr>
               <tr>
                 <td><span class="tier-dot">5</span><span data-i18n="tier5Name">Scale</span></td>
                 <td data-i18n="tier5Applied">Meals 41+</td>
-                <td class="price">AED 14.00</td>
+                <td class="price">AED 16.00</td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" data-i18n="portionNote">Standard meal: 150g carbohydrate + 100g protein. Extra protein is +AED 4 per meal for each 50g step, up to a maximum of 200g protein (+AED 8 per meal).</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
 
         <aside class="calc">
           <h3 data-i18n="calcTitle">Business quote calculator</h3>
-          <div class="sub" data-i18n="calcIntro">Enter the expected daily meals and choose pickup or delivery. Pricing is calculated progressively.</div>
+          <div class="sub" data-i18n="calcIntro">Enter the expected daily meals. Pricing is calculated progressively and delivery is already included.</div>
 
           <label for="mealCount" data-i18n="labelMeals">Meals per day</label>
           <input id="mealCount" type="number" min="1" step="1" value="20" />
@@ -1080,49 +1092,35 @@
             <button type="button" data-meals="50">50</button>
           </div>
 
-          <div class="delivery-row">
-            <div>
-              <label for="deliveryMode" data-i18n="labelDelivery">Fulfilment</label>
-              <select id="deliveryMode">
-                <option value="pickup" data-i18n="pickupOption">Pickup — Free</option>
-                <option value="delivery" data-i18n="deliveryOption">Standard delivery</option>
-              </select>
-            </div>
-            <div>
-              <label for="deliveryStops" data-i18n="labelStops">Delivery stops</label>
-              <input id="deliveryStops" type="number" min="1" step="1" value="1" />
-            </div>
-          </div>
+          <label for="proteinLevel" data-i18n="labelProtein">Protein per meal</label>
+          <select id="proteinLevel">
+            <option value="0" data-i18n="protein100">100g — standard, included</option>
+            <option value="4" data-i18n="protein150">150g — +AED 4 / meal</option>
+            <option value="8" data-i18n="protein200">200g — +AED 8 / meal</option>
+          </select>
+
 
           <div class="calc-grid">
             <div class="calc-metric">
               <span data-i18n="dailyMealTotal">Daily meals total</span>
-              <strong id="dailyMealTotalValue">AED 315</strong>
+              <strong id="dailyMealTotalValue">AED 395</strong>
             </div>
             <div class="calc-metric">
               <span data-i18n="averageMeal">Average / meal</span>
-              <strong id="avgPrice">AED 15.75</strong>
-            </div>
-            <div class="calc-metric">
-              <span data-i18n="deliveryFee">Delivery / day</span>
-              <strong id="deliveryDaily">AED 0</strong>
+              <strong id="avgPrice">AED 19.75</strong>
             </div>
             <div class="calc-metric highlight">
               <span data-i18n="monthlyQuote">26-day monthly quote</span>
-              <strong id="monthlyTotal">AED 8,190</strong>
+              <strong id="monthlyTotal">AED 10,270</strong>
             </div>
             <div class="calc-metric">
               <span data-i18n="monthlyMeals">Meals / month</span>
               <strong id="monthlyMeals">520</strong>
             </div>
-            <div class="calc-metric">
-              <span data-i18n="monthlyDelivery">Delivery / month</span>
-              <strong id="monthlyDelivery">AED 0</strong>
-            </div>
           </div>
 
           <div class="delivery-note" data-i18n="deliveryPolicyShort">
-            Pickup is free. Standard local delivery is AED 5 per service day per location. Additional stops are AED 5 each per day. Outside the standard area or special delivery timing is quoted separately.
+            Standard local delivery to one location is included in the meal price on every service day. Additional locations, areas outside the standard zone or special delivery timing are quoted separately.
           </div>
         </aside>
       </div>
@@ -1138,12 +1136,12 @@
         <div class="offer-card">
           <div class="offer-icon">P</div>
           <h3 data-i18n="offer1Title">Protein</h3>
-          <p data-i18n="offer1Copy">Controlled portion built around simple, repeatable proteins suitable for efficient bulk production.</p>
+          <p data-i18n="offer1Copy">100g of protein per meal as standard, built around simple repeatable proteins suited to efficient bulk production. Upgrade to 150g or 200g for +AED 4 per 50g step.</p>
         </div>
         <div class="offer-card">
           <div class="offer-icon">C</div>
           <h3 data-i18n="offer2Title">Carbohydrate</h3>
-          <p data-i18n="offer2Copy">Rice, pasta, potatoes or another planned carbohydrate base depending on the menu rotation.</p>
+          <p data-i18n="offer2Copy">150g of a planned carbohydrate base per meal — rice, pasta, potatoes or another option depending on the menu rotation.</p>
         </div>
         <div class="offer-card">
           <div class="offer-icon">M</div>
@@ -1152,8 +1150,8 @@
         </div>
         <div class="offer-card">
           <div class="offer-icon">F</div>
-          <h3 data-i18n="offer4Title">Flexible fulfilment</h3>
-          <p data-i18n="offer4Copy">Customer pickup is free. Standard delivery can be added for AED 5 per service day per location.</p>
+          <h3 data-i18n="offer4Title">Delivery included</h3>
+          <p data-i18n="offer4Copy">Standard local delivery to one location is included in the meal price on every service day. Pickup stays available at no charge.</p>
         </div>
       </div>
     </section>
@@ -1161,7 +1159,7 @@
     <section class="section">
       <div class="section-head">
         <h2 data-i18n="deliveryTitle">Delivery policy</h2>
-        <p data-i18n="deliveryIntro">Simple, transparent delivery pricing with no surprises.</p>
+        <p data-i18n="deliveryIntro">Delivery is built into the meal price. No separate fee, no surprises.</p>
       </div>
 
       <div class="table-card">
@@ -1174,16 +1172,16 @@
           </thead>
           <tbody>
             <tr>
-              <td data-i18n="pickupRow">Customer pickup</td>
-              <td><strong data-i18n="pickupFree">Free</strong></td>
+              <td data-i18n="standardDeliveryRow">Standard local delivery (one location)</td>
+              <td><strong data-i18n="standardDeliveryRule">Included in the meal price</strong></td>
             </tr>
             <tr>
-              <td data-i18n="standardDeliveryRow">Standard local delivery</td>
-              <td data-i18n="standardDeliveryRule">AED 5 per service day for one location</td>
+              <td data-i18n="pickupRow">Customer pickup</td>
+              <td data-i18n="pickupFree">Free — available if you prefer it</td>
             </tr>
             <tr>
               <td data-i18n="extraStopRow">Additional location / stop</td>
-              <td data-i18n="extraStopRule">+ AED 5 per service day per additional stop</td>
+              <td data-i18n="extraStopRule">Quoted separately</td>
             </tr>
             <tr>
               <td data-i18n="specialDeliveryRow">Outside area / special timing</td>
@@ -1238,15 +1236,15 @@
     const translations = {
       en: {
         brandSub:"B2B Meal Partnership",
-        navPitch:"Pitch", navPricing:"Pricing", navOffer:"Offer",
+        navPitch:"Pitch", navPricing:"Pricing", navOffer:"Offer", pdfBtn:"Download PDF",
         heroEyebrow:"Business Meal Partnership",
         heroTitle:"Start small.<br>Feed your team.<br>Grow when it works.",
-        heroCopy:"A simple daily meal program for companies, offices, gyms, clinics, academies, workshops, retail teams and other businesses. Low starting commitment, predictable monthly spend, and better pricing as real volume grows.",
-        tag1:"10 meals/day minimum", tag2:"26 service days", tag3:"Progressive pricing", tag4:"Pickup free",
+        heroCopy:"A simple daily meal program for companies, offices, gyms, clinics, academies, workshops, retail teams and other businesses. Low starting commitment, predictable monthly spend, free delivery, and better pricing as real volume grows.",
+        tag1:"10 meals/day minimum", tag2:"26 service days", tag3:"Progressive pricing", tag4:"Free delivery", tag5:"150g carbs · 100g protein",
         startCommitment:"Starting commitment",
         startCommitmentNote:"Meals per day. Small enough for a pilot, large enough to create a useful recurring account.",
         startPrice:"Starting price",
-        startPriceNote:"Per meal for the first 10 meals. Additional volume receives progressively better pricing.",
+        startPriceNote:"Per meal for the first 10 meals, daily delivery included. Additional volume receives progressively better pricing.",
         pitchTitle:"The pitch",
         pitchIntro:"Flexibility and affordability — not a large catering commitment.",
         quote:"“Start with just 10 meals a day. We prove the service first, then your average price improves as your team order grows.”",
@@ -1267,7 +1265,7 @@
         industry7:"Warehouses", industry7Sub:"Operations teams",
         industry8:"Sports Clubs", industry8Sub:"Players + staff",
         pricingTitle:"Progressive pricing",
-        pricingIntro:"You get rewarded for growth. Every additional meal is priced lower as your daily volume rises.",
+        pricingIntro:"You get rewarded for growth. Every additional meal is priced lower as your daily volume rises. Delivery is included in every price below — the first 10 meals carry the daily delivery run, which is why the first step down is the largest.",
         thTier:"Daily tier", thApplied:"Applied to", thPrice:"Price / meal",
         tier1Name:"Base", tier1Applied:"First 10 meals",
         tier2Name:"Growth", tier2Applied:"Meals 11–20",
@@ -1275,24 +1273,25 @@
         tier4Name:"Expanded", tier4Applied:"Meals 31–40",
         tier5Name:"Scale", tier5Applied:"Meals 41+",
         calcTitle:"Business quote calculator",
-        calcIntro:"Enter the expected daily meals and choose pickup or delivery. Pricing is calculated progressively.",
-        labelMeals:"Meals per day", labelDelivery:"Fulfilment", labelStops:"Delivery stops",
-        pickupOption:"Pickup — Free", deliveryOption:"Standard delivery",
-        dailyMealTotal:"Daily meals total", averageMeal:"Average / meal", deliveryFee:"Delivery / day",
-        monthlyQuote:"26-day monthly quote", monthlyMeals:"Meals / month", monthlyDelivery:"Delivery / month",
-        deliveryPolicyShort:"Pickup is free. Standard local delivery is AED 5 per service day per location. Additional stops are AED 5 each per day. Outside the standard area or special delivery timing is quoted separately.",
+        calcIntro:"Enter the expected daily meals. Pricing is calculated progressively and delivery is already included.",
+        labelMeals:"Meals per day", labelProtein:"Protein per meal",
+        protein100:"100g — standard, included", protein150:"150g — +AED 4 / meal", protein200:"200g — +AED 8 / meal",
+        portionNote:"Standard meal: 150g carbohydrate + 100g protein. Extra protein is +AED 4 per meal for each 50g step, up to a maximum of 200g protein (+AED 8 per meal).",
+        dailyMealTotal:"Daily meals total", averageMeal:"Average / meal",
+        monthlyQuote:"26-day monthly quote", monthlyMeals:"Meals / month",
+        deliveryPolicyShort:"Standard local delivery to one location is included in the meal price on every service day. Additional locations, areas outside the standard zone or special delivery timing are quoted separately.",
         offerTitle:"What you receive",
         offerIntro:"A recurring business meal program: consistent, planned and reliable every service day.",
         offer1Title:"Protein", offer1Copy:"Controlled portion built around simple, repeatable proteins suitable for efficient bulk production.",
         offer2Title:"Carbohydrate", offer2Copy:"Rice, pasta, potatoes or another planned carbohydrate base depending on the menu rotation.",
         offer3Title:"Rotating menu", offer3Copy:"A controlled weekly rotation keeps the offer practical without adding unnecessary complexity.",
-        offer4Title:"Flexible fulfilment", offer4Copy:"Customer pickup is free. Standard delivery can be added for AED 5 per service day per location.",
+        offer4Title:"Delivery included", offer4Copy:"Standard local delivery to one location is included in the meal price on every service day. Pickup stays available at no charge.",
         deliveryTitle:"Delivery policy",
-        deliveryIntro:"Simple, transparent delivery pricing with no surprises.",
+        deliveryIntro:"Delivery is built into the meal price. No separate fee, no surprises.",
         deliveryType:"Option", deliveryRule:"Commercial rule",
-        pickupRow:"Customer pickup", pickupFree:"Free",
-        standardDeliveryRow:"Standard local delivery", standardDeliveryRule:"AED 5 per service day for one location",
-        extraStopRow:"Additional location / stop", extraStopRule:"+ AED 5 per service day per additional stop",
+        pickupRow:"Customer pickup", pickupFree:"Free — available if you prefer it",
+        standardDeliveryRow:"Standard local delivery (one location)", standardDeliveryRule:"Included in the meal price",
+        extraStopRow:"Additional location / stop", extraStopRule:"Quoted separately",
         specialDeliveryRow:"Outside area / special timing", specialDeliveryRule:"Quoted separately",
         growthTitle:"How your program grows",
         growthIntro:"Expand after the service is proven, at your own pace.",
@@ -1305,15 +1304,15 @@
       },
       ar: {
         brandSub:"شراكة وجبات للشركات",
-        navPitch:"العرض", navPricing:"الأسعار", navOffer:"الخدمة",
+        navPitch:"العرض", navPricing:"الأسعار", navOffer:"الخدمة", pdfBtn:"تحميل PDF",
         heroEyebrow:"شراكة وجبات للشركات",
         heroTitle:"ابدأ بشكل بسيط.<br>وفّر الوجبات لفريقك.<br>وتوسع عندما ينجح البرنامج.",
-        heroCopy:"برنامج وجبات يومي بسيط للشركات والمكاتب والنوادي الرياضية والعيادات والأكاديميات والورش وفرق التجزئة وغيرها من جهات العمل. التزام مبدئي منخفض، تكلفة شهرية واضحة، وسعر أفضل كلما زاد الحجم الفعلي.",
-        tag1:"الحد الأدنى 10 وجبات يومياً", tag2:"26 يوم خدمة", tag3:"تسعير تدريجي", tag4:"الاستلام مجاناً",
+        heroCopy:"برنامج وجبات يومي بسيط للشركات والمكاتب والنوادي الرياضية والعيادات والأكاديميات والورش وفرق التجزئة وغيرها من جهات العمل. التزام مبدئي منخفض، تكلفة شهرية واضحة، توصيل مجاني، وسعر أفضل كلما زاد الحجم الفعلي.",
+        tag1:"الحد الأدنى 10 وجبات يومياً", tag2:"26 يوم خدمة", tag3:"تسعير تدريجي", tag4:"توصيل مجاني", tag5:"150غ كربوهيدرات · 100غ بروتين",
         startCommitment:"الحد الأدنى للبدء",
         startCommitmentNote:"10 وجبات يومياً. عدد مناسب لتجربة الخدمة والبدء بحساب متكرر بدون التزام كبير.",
         startPrice:"سعر البداية",
-        startPriceNote:"لكل وجبة لأول 10 وجبات. الكميات الإضافية تحصل على سعر أفضل بشكل تدريجي.",
+        startPriceNote:"لكل وجبة لأول 10 وجبات، شاملة التوصيل اليومي. الكميات الإضافية تحصل على سعر أفضل بشكل تدريجي.",
         pitchTitle:"فكرة العرض",
         pitchIntro:"مرونة وسعر مناسب — وليس عقد تموين كبير من أول يوم.",
         quote:"“ابدأ بـ10 وجبات فقط يومياً. نثبت جودة الخدمة أولاً، وبعدها ينخفض متوسط السعر كلما زاد طلب فريقك.”",
@@ -1334,7 +1333,7 @@
         industry7:"المستودعات", industry7Sub:"فرق التشغيل",
         industry8:"الأندية الرياضية", industry8Sub:"اللاعبون والموظفون",
         pricingTitle:"التسعير التدريجي",
-        pricingIntro:"تحصل على سعر أفضل مع زيادة الطلب. كل وجبة إضافية تُسعّر بشكل أقل كلما زاد حجمك اليومي.",
+        pricingIntro:"تحصل على سعر أفضل مع زيادة الطلب. كل وجبة إضافية تُسعّر بشكل أقل كلما زاد حجمك اليومي. جميع الأسعار أدناه شاملة التوصيل — أول 10 وجبات تتحمل تكلفة رحلة التوصيل اليومية، ولهذا تكون أول خطوة تخفيض هي الأكبر.",
         thTier:"الشريحة اليومية", thApplied:"تطبق على", thPrice:"سعر الوجبة",
         tier1Name:"البداية", tier1Applied:"أول 10 وجبات",
         tier2Name:"النمو", tier2Applied:"من الوجبة 11 إلى 20",
@@ -1342,24 +1341,25 @@
         tier4Name:"التوسع", tier4Applied:"من الوجبة 31 إلى 40",
         tier5Name:"الحجم الكبير", tier5Applied:"من الوجبة 41 فما فوق",
         calcTitle:"حاسبة عرض الشركة",
-        calcIntro:"أدخل عدد الوجبات اليومية واختر الاستلام أو التوصيل. يتم احتساب السعر تدريجياً حسب الشرائح.",
-        labelMeals:"عدد الوجبات يومياً", labelDelivery:"طريقة الاستلام", labelStops:"عدد مواقع التوصيل",
-        pickupOption:"استلام من 24 DIET — مجاناً", deliveryOption:"توصيل عادي",
-        dailyMealTotal:"قيمة الوجبات اليومية", averageMeal:"متوسط سعر الوجبة", deliveryFee:"التوصيل يومياً",
-        monthlyQuote:"الإجمالي الشهري لـ26 يوم", monthlyMeals:"الوجبات شهرياً", monthlyDelivery:"التوصيل شهرياً",
-        deliveryPolicyShort:"الاستلام مجاني. التوصيل المحلي العادي 5 دراهم لكل يوم خدمة ولكل موقع. كل موقع إضافي 5 دراهم يومياً. التوصيل خارج المنطقة المعتادة أو في وقت خاص يتم تسعيره بشكل منفصل.",
+        calcIntro:"أدخل عدد الوجبات اليومية. يتم احتساب السعر تدريجياً حسب الشرائح، والتوصيل مشمول في السعر.",
+        labelMeals:"عدد الوجبات يومياً", labelProtein:"البروتين لكل وجبة",
+        protein100:"100غ — القياسي، مشمول", protein150:"150غ — +4 دراهم للوجبة", protein200:"200غ — +8 دراهم للوجبة",
+        portionNote:"الوجبة القياسية: 150غ كربوهيدرات + 100غ بروتين. البروتين الإضافي بـ+4 دراهم للوجبة لكل زيادة 50غ، بحد أقصى 200غ بروتين (+8 دراهم للوجبة).",
+        dailyMealTotal:"قيمة الوجبات اليومية", averageMeal:"متوسط سعر الوجبة",
+        monthlyQuote:"الإجمالي الشهري لـ26 يوم", monthlyMeals:"الوجبات شهرياً",
+        deliveryPolicyShort:"التوصيل المحلي العادي لموقع واحد مشمول في سعر الوجبة في كل يوم خدمة. المواقع الإضافية، أو التوصيل خارج المنطقة المعتادة، أو في وقت خاص، يتم تسعيرها بشكل منفصل.",
         offerTitle:"ماذا تحصل عليه؟",
         offerIntro:"برنامج وجبات متكرر للأعمال: ثابت ومخطط وموثوق في كل يوم خدمة.",
-        offer1Title:"بروتين", offer1Copy:"حصة بروتين مدروسة تعتمد على خيارات بسيطة وقابلة للتكرار ومناسبة للإنتاج بالكميات.",
-        offer2Title:"كربوهيدرات", offer2Copy:"أرز أو باستا أو بطاطا أو قاعدة كربوهيدرات أخرى حسب دورة القائمة.",
+        offer1Title:"بروتين", offer1Copy:"100غ بروتين لكل وجبة بشكل قياسي، معتمدة على خيارات بسيطة وقابلة للتكرار ومناسبة للإنتاج بالكميات. يمكن الترقية إلى 150غ أو 200غ بـ+4 دراهم لكل زيادة 50غ.",
+        offer2Title:"كربوهيدرات", offer2Copy:"150غ من قاعدة كربوهيدرات مدروسة لكل وجبة — أرز أو باستا أو بطاطا أو خيار آخر حسب دورة القائمة.",
         offer3Title:"قائمة متغيرة", offer3Copy:"دورة أسبوعية محددة تحافظ على التنوع بدون تعقيد غير ضروري.",
-        offer4Title:"استلام مرن", offer4Copy:"الاستلام من 24 DIET مجاني، ويمكن إضافة التوصيل العادي مقابل 5 دراهم لكل يوم خدمة ولكل موقع.",
+        offer4Title:"التوصيل مشمول", offer4Copy:"التوصيل المحلي العادي لموقع واحد مشمول في سعر الوجبة في كل يوم خدمة. ويبقى الاستلام من 24 DIET متاحاً مجاناً.",
         deliveryTitle:"سياسة التوصيل",
-        deliveryIntro:"تسعير توصيل بسيط وواضح بدون مفاجآت.",
+        deliveryIntro:"التوصيل مشمول في سعر الوجبة. بدون رسوم منفصلة وبدون مفاجآت.",
         deliveryType:"الخيار", deliveryRule:"القاعدة التجارية",
-        pickupRow:"استلام العميل", pickupFree:"مجاناً",
-        standardDeliveryRow:"توصيل محلي عادي", standardDeliveryRule:"5 دراهم لكل يوم خدمة لموقع واحد",
-        extraStopRow:"موقع / محطة إضافية", extraStopRule:"+5 دراهم لكل يوم خدمة لكل موقع إضافي",
+        pickupRow:"استلام العميل", pickupFree:"مجاناً — متاح إذا كنت تفضله",
+        standardDeliveryRow:"توصيل محلي عادي (موقع واحد)", standardDeliveryRule:"مشمول في سعر الوجبة",
+        extraStopRow:"موقع / محطة إضافية", extraStopRule:"يتم تسعيره بشكل منفصل",
         specialDeliveryRow:"خارج المنطقة / توقيت خاص", specialDeliveryRule:"يتم التسعير بشكل منفصل",
         growthTitle:"كيف ينمو الحساب؟",
         growthIntro:"توسّع بعد إثبات الخدمة، وبالوتيرة التي تناسبك.",
@@ -1373,11 +1373,11 @@
     };
 
     const tiers = [
-      { qty: 10, price: 16.00 },
-      { qty: 10, price: 15.50 },
-      { qty: 10, price: 15.00 },
-      { qty: 10, price: 14.50 },
-      { qty: Infinity, price: 14.00 }
+      { qty: 10, price: 21.00 },
+      { qty: 10, price: 18.50 },
+      { qty: 10, price: 17.50 },
+      { qty: 10, price: 16.50 },
+      { qty: Infinity, price: 16.00 }
     ];
 
     function quoteForMeals(meals){
@@ -1405,27 +1405,16 @@
       const meals = Math.max(1, Math.floor(Number(input.value) || 1));
       input.value = meals;
 
-      const dailyMeals = quoteForMeals(meals);
-      const mode = document.getElementById("deliveryMode").value;
-      const stopsInput = document.getElementById("deliveryStops");
-      let stops = Math.max(1, Math.floor(Number(stopsInput.value) || 1));
-      stopsInput.value = stops;
-
-      const dailyDelivery = mode === "delivery" ? 5 * stops : 0;
-      const monthlyMealRevenue = dailyMeals * 26;
-      const monthlyDelivery = dailyDelivery * 26;
-      const monthlyTotal = monthlyMealRevenue + monthlyDelivery;
+      const proteinAddPerMeal = Number(document.getElementById("proteinLevel").value) || 0;
+      const dailyMeals = quoteForMeals(meals) + proteinAddPerMeal * meals;
+      const monthlyTotal = dailyMeals * 26;
       const avg = dailyMeals / meals;
 
       document.getElementById("dailyMealTotalValue").textContent = money(dailyMeals, dailyMeals % 1 ? 2 : 0);
       document.getElementById("avgPrice").textContent = money(avg, 2);
-      document.getElementById("deliveryDaily").textContent = money(dailyDelivery, 0);
       document.getElementById("monthlyTotal").textContent = money(monthlyTotal, monthlyTotal % 1 ? 2 : 0);
       document.getElementById("monthlyMeals").textContent = (meals * 26).toLocaleString("en-AE");
-      document.getElementById("monthlyDelivery").textContent = money(monthlyDelivery, 0);
 
-      stopsInput.disabled = mode !== "delivery";
-      stopsInput.style.opacity = mode === "delivery" ? "1" : ".45";
     }
 
     function setLanguage(lang){
@@ -1448,17 +1437,11 @@
       document.getElementById("langEn").classList.toggle("active", !isAr);
       document.getElementById("langAr").classList.toggle("active", isAr);
 
-      const pickupOption = document.querySelector('#deliveryMode option[value="pickup"]');
-      const deliveryOption = document.querySelector('#deliveryMode option[value="delivery"]');
-      pickupOption.textContent = translations[lang].pickupOption;
-      deliveryOption.textContent = translations[lang].deliveryOption;
-
       updateCalculator();
     }
 
     document.getElementById("mealCount").addEventListener("input", updateCalculator);
-    document.getElementById("deliveryMode").addEventListener("change", updateCalculator);
-    document.getElementById("deliveryStops").addEventListener("input", updateCalculator);
+    document.getElementById("proteinLevel").addEventListener("change", updateCalculator);
 
     document.querySelectorAll("[data-meals]").forEach(btn => {
       btn.addEventListener("click", () => {
