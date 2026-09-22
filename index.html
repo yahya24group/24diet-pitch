@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24 DIET — B2B Meal Partnership</title>
+  <meta name="description" content="24 DIET general B2B meal partnership pitch with progressive pricing and bilingual English/Arabic presentation." />
+  <style>
+    :root{
+      --ink:#111318;
+      --muted:#667085;
+      --line:#D8DDE6;
+      --paper:#F4F6F8;
+      --white:#FFFFFF;
+      --navy:#12213D;
+      --blue:#2453FF;
+      --green:#0F7A55;
+      --sand:#F1E8D8;
+      --orange:#E86B2B;
+      --yellow:#F3C949;
+      --red:#C4382B;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+      background:var(--paper);
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, "Segoe UI", Tahoma, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums;
+    }
+
+    [dir="rtl"] body{
+      font-family:Tahoma, Arial, "Segoe UI", sans-serif;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+
+    .page{
+      max-width:1240px;
+      margin:0 auto;
+      padding:22px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:15px 16px;
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:16px;
+      margin-bottom:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      background:var(--navy);
+      color:var(--white);
+      font-weight:950;
+      letter-spacing:-.05em;
+      flex:0 0 auto;
+    }
+
+    .brand-copy strong{
+      display:block;
+      font-size:14px;
+      letter-spacing:-.02em;
+    }
+
+    .brand-copy span{
+      display:block;
+      margin-top:2px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .top-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .nav{
+      display:flex;
+      gap:7px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .nav a{
+      background:#EEF1F5;
+      color:#475467;
+      border-radius:9px;
+      padding:8px 10px;
+      font-size:11px;
+      font-weight:850;
+    }
+
+    .lang-switch{
+      display:flex;
+      padding:3px;
+      border-radius:10px;
+      background:var(--navy);
+    }
+
+    .lang-switch button{
+      min-width:54px;
+      border:0;
+      background:transparent;
+      color:#C9D2E2;
+      padding:7px 10px;
+      border-radius:7px;
+      cursor:pointer;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .lang-switch button.active{
+      background:var(--white);
+      color:var(--navy);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.42fr) minmax(300px,.58fr);
+      gap:16px;
+      margin-bottom:16px;
+    }
+
+    .hero-main{
+      min-height:450px;
+      padding:40px;
+      border-radius:24px;
+      background:var(--navy);
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      width:max-content;
+      background:#22365B;
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3,p{margin-top:0}
+
+    h1{
+      max-width:800px;
+      margin:22px 0 16px;
+      font-size:clamp(44px,7vw,78px);
+      line-height:.95;
+      letter-spacing:-.055em;
+    }
+
+    [dir="rtl"] h1{
+      letter-spacing:0;
+      line-height:1.08;
+    }
+
+    .hero-main p{
+      max-width:720px;
+      color:#D7DDEA;
+      font-size:17px;
+      line-height:1.55;
+      margin-bottom:0;
+    }
+
+    .hero-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:30px;
+    }
+
+    .hero-tags span{
+      border:1px solid #405074;
+      color:#F3F5F9;
+      padding:9px 11px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .hero-side{
+      display:grid;
+      grid-template-rows:1fr 1fr;
+      gap:16px;
+    }
+
+    .hero-card{
+      border-radius:24px;
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      color:var(--white);
+    }
+
+    .hero-card.blue{background:var(--blue)}
+    .hero-card.green{background:var(--green)}
+
+    .kicker{
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      opacity:.82;
+    }
+
+    .hero-number{
+      margin:18px 0 4px;
+      font-size:54px;
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.06em;
+    }
+
+    .hero-note{
+      font-size:12px;
+      line-height:1.5;
+      opacity:.9;
+    }
+
+    .section{
+      margin-bottom:16px;
+      padding:30px;
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:22px;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:24px;
+      margin-bottom:22px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:29px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    [dir="rtl"] .section-head h2{letter-spacing:0}
+
+    .section-head p{
+      max-width:620px;
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+      text-align:right;
+    }
+
+    [dir="rtl"] .section-head p{text-align:left}
+
+    .pitch-strip{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid var(--line);
+      margin-bottom:22px;
+    }
+
+    .pitch-copy{
+      padding:28px;
+      background:var(--sand);
+    }
+
+    .pitch-copy .quote{
+      max-width:760px;
+      margin:0;
+      font-size:28px;
+      line-height:1.2;
+      letter-spacing:-.035em;
+      font-weight:850;
+    }
+
+    [dir="rtl"] .pitch-copy .quote{letter-spacing:0; line-height:1.55}
+
+    .pitch-note{
+      padding:28px;
+      background:var(--orange);
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .pitch-note strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:26px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    [dir="rtl"] .pitch-note strong{letter-spacing:0; line-height:1.35}
+
+    .pitch-note span{
+      font-size:12px;
+      line-height:1.55;
+      opacity:.95;
+    }
+
+    .pricing-wrap{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .table-card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+      background:var(--white);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    th,td{
+      padding:15px 16px;
+      border-bottom:1px solid var(--line);
+      text-align:left;
+    }
+
+    [dir="rtl"] th,
+    [dir="rtl"] td{text-align:right}
+
+    th{
+      background:#F7F8FA;
+      color:#475467;
+      font-size:10px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    [dir="rtl"] th{
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    td{font-size:13px}
+    tbody tr:last-child td{border-bottom:0}
+
+    .price{
+      font-size:20px;
+      font-weight:950;
+      letter-spacing:-.03em;
+    }
+
+    .tier-dot{
+      display:inline-grid;
+      place-items:center;
+      width:28px;
+      height:28px;
+      margin-right:9px;
+      border-radius:8px;
+      background:var(--navy);
+      color:#fff;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    [dir="rtl"] .tier-dot{
+      margin-right:0;
+      margin-left:9px;
+    }
+
+    .calc{
+      border-radius:18px;
+      background:var(--navy);
+      color:var(--white);
+      padding:24px;
+    }
+
+    .calc h3{
+      margin:0 0 5px;
+      font-size:21px;
+      letter-spacing:-.03em;
+    }
+
+    [dir="rtl"] .calc h3{letter-spacing:0}
+
+    .calc .sub{
+      color:#C8D1E2;
+      font-size:12px;
+      line-height:1.5;
+      margin-bottom:18px;
+    }
+
+    .calc label{
+      display:block;
+      margin-bottom:8px;
+      font-size:11px;
+      font-weight:850;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+
+    [dir="rtl"] .calc label{
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .calc input[type="number"],
+    .calc select{
+      width:100%;
+      border:0;
+      outline:0;
+      border-radius:12px;
+      padding:14px;
+      background:var(--white);
+      color:var(--ink);
+      font-size:18px;
+      font-weight:900;
+    }
+
+    .calc input[type="number"]{font-size:22px}
+
+    .quick-buttons{
+      display:flex;
+      gap:7px;
+      flex-wrap:wrap;
+      margin:10px 0 18px;
+    }
+
+    .quick-buttons button{
+      border:1px solid #435578;
+      background:#203150;
+      color:#fff;
+      padding:8px 10px;
+      border-radius:9px;
+      cursor:pointer;
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .quick-buttons button:hover{background:#2A3F65}
+
+    .delivery-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin:14px 0 18px;
+    }
+
+    .calc-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .calc-metric{
+      min-height:90px;
+      padding:14px;
+      background:#1D2D49;
+      border-radius:13px;
+    }
+
+    .calc-metric span{
+      display:block;
+      color:#AEBBD1;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      font-weight:800;
+    }
+
+    [dir="rtl"] .calc-metric span{
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .calc-metric strong{
+      display:block;
+      margin-top:8px;
+      font-size:24px;
+      letter-spacing:-.04em;
+    }
+
+    .calc-metric.highlight{background:var(--blue)}
+    .calc-metric.highlight span{color:#DBE4FF}
+
+    .delivery-note{
+      margin-top:12px;
+      padding:12px;
+      border-radius:11px;
+      background:#203150;
+      color:#D2DAE8;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .offer-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .offer-card{
+      min-height:170px;
+      padding:20px;
+      border-radius:16px;
+      background:#F7F8FA;
+      border:1px solid var(--line);
+    }
+
+    .offer-icon{
+      width:38px;
+      height:38px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      margin-bottom:18px;
+      font-weight:950;
+      font-size:13px;
+      color:#fff;
+    }
+
+    .offer-card:nth-child(1) .offer-icon{background:var(--blue)}
+    .offer-card:nth-child(2) .offer-icon{background:var(--green)}
+    .offer-card:nth-child(3) .offer-icon{background:var(--orange)}
+    .offer-card:nth-child(4) .offer-icon{background:var(--navy)}
+
+    .offer-card h3{
+      margin-bottom:7px;
+      font-size:16px;
+      letter-spacing:-.02em;
+    }
+
+    [dir="rtl"] .offer-card h3{letter-spacing:0}
+
+    .offer-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .industry-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+    }
+
+    .industry{
+      min-height:100px;
+      border-radius:14px;
+      padding:16px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .industry:nth-child(1){background:var(--navy)}
+    .industry:nth-child(2){background:var(--blue)}
+    .industry:nth-child(3){background:var(--green)}
+    .industry:nth-child(4){background:var(--orange)}
+    .industry:nth-child(5){background:#4B3C88}
+    .industry:nth-child(6){background:#986A17}
+    .industry:nth-child(7){background:#305C75}
+    .industry:nth-child(8){background:#7A3654}
+
+    .industry strong{
+      font-size:16px;
+      letter-spacing:-.02em;
+    }
+
+    [dir="rtl"] .industry strong{letter-spacing:0}
+
+    .industry span{
+      margin-top:12px;
+      font-size:10px;
+      opacity:.86;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .step{
+      border-top:4px solid var(--navy);
+      background:#F7F8FA;
+      border-radius:0 0 14px 14px;
+      padding:18px;
+    }
+
+    .step:nth-child(2){border-color:var(--blue)}
+    .step:nth-child(3){border-color:var(--green)}
+    .step:nth-child(4){border-color:var(--orange)}
+
+    .step small{
+      color:var(--muted);
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    [dir="rtl"] .step small{
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .step strong{
+      display:block;
+      margin:10px 0 6px;
+      font-size:18px;
+      letter-spacing:-.03em;
+    }
+
+    [dir="rtl"] .step strong{letter-spacing:0}
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .sales-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:16px;
+    }
+
+    .rules{
+      background:var(--navy);
+      color:#fff;
+      border-radius:18px;
+      padding:24px;
+    }
+
+    .rules h3,
+    .talk-track h3{
+      font-size:21px;
+      margin-bottom:16px;
+      letter-spacing:-.03em;
+    }
+
+    [dir="rtl"] .rules h3,
+    [dir="rtl"] .talk-track h3{letter-spacing:0}
+
+    .rule{
+      display:grid;
+      grid-template-columns:34px 1fr;
+      gap:10px;
+      padding:13px 0;
+      border-bottom:1px solid #33445F;
+    }
+
+    .rule:last-child{border-bottom:0}
+
+    .rule-num{
+      width:28px;
+      height:28px;
+      border-radius:8px;
+      display:grid;
+      place-items:center;
+      background:var(--blue);
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .rule p{
+      margin:1px 0 0;
+      color:#D5DCEA;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .talk-track{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+      background:var(--white);
+    }
+
+    .script{
+      padding:22px;
+      border-radius:14px;
+      background:var(--sand);
+      font-size:22px;
+      font-weight:800;
+      line-height:1.35;
+      letter-spacing:-.025em;
+    }
+
+    [dir="rtl"] .script{
+      letter-spacing:0;
+      line-height:1.65;
+    }
+
+    .talk-points{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .talk-point{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .talk-point strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:12px;
+    }
+
+    .economics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .econ-card{
+      border-radius:16px;
+      padding:20px;
+      color:#fff;
+      min-height:150px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .econ-card:nth-child(1){background:var(--blue)}
+    .econ-card:nth-child(2){background:var(--green)}
+    .econ-card:nth-child(3){background:var(--orange)}
+
+    .econ-card small{
+      font-weight:850;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      opacity:.85;
+    }
+
+    [dir="rtl"] .econ-card small{
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .econ-card strong{
+      display:block;
+      margin-top:20px;
+      font-size:31px;
+      line-height:1;
+      letter-spacing:-.045em;
+    }
+
+    .econ-card span{
+      font-size:11px;
+      line-height:1.45;
+      opacity:.92;
+    }
+
+    .footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      padding:20px 4px 4px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .footer strong{color:var(--ink)}
+
+    .print-btn{
+      border:0;
+      background:var(--ink);
+      color:#fff;
+      border-radius:9px;
+      padding:9px 12px;
+      cursor:pointer;
+      font-size:11px;
+      font-weight:850;
+    }
+
+    [data-lang-block]{display:none}
+    html[data-lang="en"] [data-lang-block="en"]{display:initial}
+    html[data-lang="ar"] [data-lang-block="ar"]{display:initial}
+
+    div[data-lang-block], section[data-lang-block], span[data-lang-block], p[data-lang-block]{
+      display:none;
+    }
+    html[data-lang="en"] div[data-lang-block="en"],
+    html[data-lang="en"] section[data-lang-block="en"],
+    html[data-lang="en"] span[data-lang-block="en"],
+    html[data-lang="en"] p[data-lang-block="en"]{
+      display:block;
+    }
+    html[data-lang="ar"] div[data-lang-block="ar"],
+    html[data-lang="ar"] section[data-lang-block="ar"],
+    html[data-lang="ar"] span[data-lang-block="ar"],
+    html[data-lang="ar"] p[data-lang-block="ar"]{
+      display:block;
+    }
+
+    @media (max-width: 960px){
+      .hero,.pricing-wrap,.sales-grid{grid-template-columns:1fr}
+      .hero-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+      .offer-grid,.steps,.industry-grid{grid-template-columns:1fr 1fr}
+      .pitch-strip{grid-template-columns:1fr}
+      .section-head{align-items:flex-start;flex-direction:column}
+      .section-head p,[dir="rtl"] .section-head p{text-align:start}
+    }
+
+    @media (max-width: 620px){
+      .page{padding:10px}
+      .topbar{align-items:flex-start;flex-direction:column}
+      .top-actions{justify-content:flex-start}
+      .nav{justify-content:flex-start}
+      .hero-main{min-height:auto;padding:28px}
+      .hero-side{grid-template-columns:1fr}
+      h1{font-size:46px}
+      [dir="rtl"] h1{font-size:42px}
+      .section{padding:20px}
+      .offer-grid,.steps,.industry-grid,.economics,.talk-points,.calc-grid,.delivery-row{grid-template-columns:1fr}
+      .hero-number{font-size:44px}
+      th,td{padding:12px 10px}
+      .pitch-copy,.pitch-note{padding:22px}
+      .pitch-copy .quote{font-size:23px}
+      .footer{align-items:flex-start;flex-direction:column}
+    }
+
+    @media print{
+      body{background:#fff}
+      .page{max-width:none;padding:0}
+      .topbar,.nav,.print-btn,.quick-buttons,.lang-switch{display:none !important}
+      .hero,.section{break-inside:avoid}
+      .section{border-color:#C8CDD6}
+      .hero-main,.hero-card,.rules,.econ-card,.calc,.industry{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">24</div>
+        <div class="brand-copy">
+          <strong>24 DIET</strong>
+          <span data-i18n="brandSub">B2B Meal Partnership</span>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <nav class="nav">
+          <a href="#pitch" data-i18n="navPitch">Pitch</a>
+          <a href="#pricing" data-i18n="navPricing">Pricing</a>
+          <a href="#offer" data-i18n="navOffer">Offer</a>
+          <a href="#sales" data-i18n="navSales">Sales Playbook</a>
+          <a href="#economics" data-i18n="navEconomics">Economics</a>
+        </nav>
+        <div class="lang-switch" aria-label="Language switch">
+          <button type="button" id="langEn" class="active">EN</button>
+          <button type="button" id="langAr">العربية</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div>
+          <span class="eyebrow" data-i18n="heroEyebrow">Business Meal Partnership</span>
+          <h1 data-i18n="heroTitle">Start small.<br>Feed your team.<br>Grow when it works.</h1>
+          <p data-i18n="heroCopy">
+            A simple daily meal program for companies, offices, gyms, clinics, academies, workshops, retail teams and other businesses.
+            Low starting commitment, predictable monthly spend, and better pricing as real volume grows.
+          </p>
+        </div>
+        <div class="hero-tags">
+          <span data-i18n="tag1">10 meals/day minimum</span>
+          <span data-i18n="tag2">26 service days</span>
+          <span data-i18n="tag3">Progressive pricing</span>
+          <span data-i18n="tag4">Pickup free</span>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="hero-card blue">
+          <div>
+            <div class="kicker" data-i18n="startCommitment">Starting commitment</div>
+            <div class="hero-number">10</div>
+          </div>
+          <div class="hero-note" data-i18n="startCommitmentNote">Meals per day. Small enough for a pilot, large enough to create a useful recurring account.</div>
+        </div>
+
+        <div class="hero-card green">
+          <div>
+            <div class="kicker" data-i18n="startPrice">Starting price</div>
+            <div class="hero-number">AED 16</div>
+          </div>
+          <div class="hero-note" data-i18n="startPriceNote">Per meal for the first 10 meals. Additional volume receives progressively better pricing.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pitch">
+      <div class="section-head">
+        <h2 data-i18n="pitchTitle">The pitch</h2>
+        <p data-i18n="pitchIntro">Lead with flexibility and affordability — not a large catering commitment.</p>
+      </div>
+
+      <div class="pitch-strip">
+        <div class="pitch-copy">
+          <p class="quote" data-i18n="quote">
+            “Start with just 10 meals a day. We prove the service first, then your average price improves as your team order grows.”
+          </p>
+        </div>
+        <div class="pitch-note">
+          <strong data-i18n="easyApprove">Easy to approve.</strong>
+          <span data-i18n="easyApproveNote">No need to commit to a large order from day one. Start with the people who need it most and expand through usage.</span>
+        </div>
+      </div>
+
+      <div class="offer-grid">
+        <div class="offer-card">
+          <div class="offer-icon">01</div>
+          <h3 data-i18n="benefit1Title">Low starting risk</h3>
+          <p data-i18n="benefit1Copy">Begin with 10 meals/day instead of forcing an unrealistic company-wide commitment.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">02</div>
+          <h3 data-i18n="benefit2Title">Predictable budget</h3>
+          <p data-i18n="benefit2Copy">Know the daily and monthly meal spend before approving the program.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">03</div>
+          <h3 data-i18n="benefit3Title">Better price with growth</h3>
+          <p data-i18n="benefit3Copy">Only additional meals receive the lower price, keeping the pricing fair and sustainable.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">04</div>
+          <h3 data-i18n="benefit4Title">Simple operating model</h3>
+          <p data-i18n="benefit4Copy">Agreed menu, predictable quantities and clear pickup or delivery rules.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="whoTitle">Who this works for</h2>
+        <p data-i18n="whoIntro">The same offer can be used across businesses that need a simple recurring meal solution for a team or staff group.</p>
+      </div>
+
+      <div class="industry-grid">
+        <div class="industry"><strong data-i18n="industry1">Offices</strong><span data-i18n="industry1Sub">Daily staff meals</span></div>
+        <div class="industry"><strong data-i18n="industry2">Gyms</strong><span data-i18n="industry2Sub">Members + staff</span></div>
+        <div class="industry"><strong data-i18n="industry3">Clinics</strong><span data-i18n="industry3Sub">Staff catering</span></div>
+        <div class="industry"><strong data-i18n="industry4">Academies</strong><span data-i18n="industry4Sub">Students + staff</span></div>
+        <div class="industry"><strong data-i18n="industry5">Workshops</strong><span data-i18n="industry5Sub">Shift teams</span></div>
+        <div class="industry"><strong data-i18n="industry6">Retail Teams</strong><span data-i18n="industry6Sub">Store staff</span></div>
+        <div class="industry"><strong data-i18n="industry7">Warehouses</strong><span data-i18n="industry7Sub">Operations teams</span></div>
+        <div class="industry"><strong data-i18n="industry8">Sports Clubs</strong><span data-i18n="industry8Sub">Players + staff</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="section-head">
+        <h2 data-i18n="pricingTitle">Progressive pricing</h2>
+        <p data-i18n="pricingIntro">The customer gets rewarded for growth without making additional volume less profitable for 24 DIET.</p>
+      </div>
+
+      <div class="pricing-wrap">
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="thTier">Daily tier</th>
+                <th data-i18n="thApplied">Applied to</th>
+                <th data-i18n="thPrice">Price / meal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tier-dot">1</span><span data-i18n="tier1Name">Base</span></td>
+                <td data-i18n="tier1Applied">First 10 meals</td>
+                <td class="price">AED 16.00</td>
+              </tr>
+              <tr>
+                <td><span class="tier-dot">2</span><span data-i18n="tier2Name">Growth</span></td>
+                <td data-i18n="tier2Applied">Meals 11–20</td>
+                <td class="price">AED 15.50</td>
+              </tr>
+              <tr>
+                <td><span class="tier-dot">3</span><span data-i18n="tier3Name">Team</span></td>
+                <td data-i18n="tier3Applied">Meals 21–30</td>
+                <td class="price">AED 15.00</td>
+              </tr>
+              <tr>
+                <td><span class="tier-dot">4</span><span data-i18n="tier4Name">Expanded</span></td>
+                <td data-i18n="tier4Applied">Meals 31–40</td>
+                <td class="price">AED 14.50</td>
+              </tr>
+              <tr>
+                <td><span class="tier-dot">5</span><span data-i18n="tier5Name">Scale</span></td>
+                <td data-i18n="tier5Applied">Meals 41+</td>
+                <td class="price">AED 14.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="calc">
+          <h3 data-i18n="calcTitle">Business quote calculator</h3>
+          <div class="sub" data-i18n="calcIntro">Enter the expected daily meals and choose pickup or delivery. Pricing is calculated progressively.</div>
+
+          <label for="mealCount" data-i18n="labelMeals">Meals per day</label>
+          <input id="mealCount" type="number" min="1" step="1" value="20" />
+
+          <div class="quick-buttons">
+            <button type="button" data-meals="10">10</button>
+            <button type="button" data-meals="20">20</button>
+            <button type="button" data-meals="30">30</button>
+            <button type="button" data-meals="40">40</button>
+            <button type="button" data-meals="50">50</button>
+          </div>
+
+          <div class="delivery-row">
+            <div>
+              <label for="deliveryMode" data-i18n="labelDelivery">Fulfilment</label>
+              <select id="deliveryMode">
+                <option value="pickup" data-i18n="pickupOption">Pickup — Free</option>
+                <option value="delivery" data-i18n="deliveryOption">Standard delivery</option>
+              </select>
+            </div>
+            <div>
+              <label for="deliveryStops" data-i18n="labelStops">Delivery stops</label>
+              <input id="deliveryStops" type="number" min="1" step="1" value="1" />
+            </div>
+          </div>
+
+          <div class="calc-grid">
+            <div class="calc-metric">
+              <span data-i18n="dailyMealTotal">Daily meals total</span>
+              <strong id="dailyMealTotalValue">AED 315</strong>
+            </div>
+            <div class="calc-metric">
+              <span data-i18n="averageMeal">Average / meal</span>
+              <strong id="avgPrice">AED 15.75</strong>
+            </div>
+            <div class="calc-metric">
+              <span data-i18n="deliveryFee">Delivery / day</span>
+              <strong id="deliveryDaily">AED 0</strong>
+            </div>
+            <div class="calc-metric highlight">
+              <span data-i18n="monthlyQuote">26-day monthly quote</span>
+              <strong id="monthlyTotal">AED 8,190</strong>
+            </div>
+            <div class="calc-metric">
+              <span data-i18n="monthlyMeals">Meals / month</span>
+              <strong id="monthlyMeals">520</strong>
+            </div>
+            <div class="calc-metric">
+              <span data-i18n="monthlyDelivery">Delivery / month</span>
+              <strong id="monthlyDelivery">AED 0</strong>
+            </div>
+          </div>
+
+          <div class="delivery-note" data-i18n="deliveryPolicyShort">
+            Pickup is free. Standard local delivery is AED 5 per service day per location. Additional stops are AED 5 each per day. Outside the standard area or special delivery timing is quoted separately.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="offer">
+      <div class="section-head">
+        <h2 data-i18n="offerTitle">What the customer receives</h2>
+        <p data-i18n="offerIntro">Keep the product disciplined. This is a recurring business meal program, not a fully customized restaurant order.</p>
+      </div>
+
+      <div class="offer-grid">
+        <div class="offer-card">
+          <div class="offer-icon">P</div>
+          <h3 data-i18n="offer1Title">Protein</h3>
+          <p data-i18n="offer1Copy">Controlled portion built around simple, repeatable proteins suitable for efficient bulk production.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">C</div>
+          <h3 data-i18n="offer2Title">Carbohydrate</h3>
+          <p data-i18n="offer2Copy">Rice, pasta, potatoes or another planned carbohydrate base depending on the menu rotation.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">M</div>
+          <h3 data-i18n="offer3Title">Rotating menu</h3>
+          <p data-i18n="offer3Copy">A controlled weekly rotation keeps the offer practical without adding unnecessary complexity.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">F</div>
+          <h3 data-i18n="offer4Title">Flexible fulfilment</h3>
+          <p data-i18n="offer4Copy">Customer pickup is free. Standard delivery can be added for AED 5 per service day per location.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="deliveryTitle">Delivery policy</h2>
+        <p data-i18n="deliveryIntro">Keep delivery simple enough to sell, but controlled enough that logistics do not quietly erase the meal margin.</p>
+      </div>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="deliveryType">Option</th>
+              <th data-i18n="deliveryRule">Commercial rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="pickupRow">Customer pickup</td>
+              <td><strong data-i18n="pickupFree">Free</strong></td>
+            </tr>
+            <tr>
+              <td data-i18n="standardDeliveryRow">Standard local delivery</td>
+              <td data-i18n="standardDeliveryRule">AED 5 per service day for one location</td>
+            </tr>
+            <tr>
+              <td data-i18n="extraStopRow">Additional location / stop</td>
+              <td data-i18n="extraStopRule">+ AED 5 per service day per additional stop</td>
+            </tr>
+            <tr>
+              <td data-i18n="specialDeliveryRow">Outside area / special timing</td>
+              <td data-i18n="specialDeliveryRule">Quoted separately</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="growthTitle">How the account should grow</h2>
+        <p data-i18n="growthIntro">Build usage after the service is proven instead of asking for a large commitment at the first meeting.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <small data-i18n="step1Small">Step 01</small>
+          <strong data-i18n="step1Title">Pilot</strong>
+          <p data-i18n="step1Copy">Start with 10–20 people and prove quality, timing and reliability.</p>
+        </div>
+        <div class="step">
+          <small data-i18n="step2Small">Step 02</small>
+          <strong data-i18n="step2Title">Core team</strong>
+          <p data-i18n="step2Copy">Add more employees, members or staff once the first group is satisfied.</p>
+        </div>
+        <div class="step">
+          <small data-i18n="step3Small">Step 03</small>
+          <strong data-i18n="step3Title">More departments</strong>
+          <p data-i18n="step3Copy">Expand to another shift, department, branch or staff group.</p>
+        </div>
+        <div class="step">
+          <small data-i18n="step4Small">Step 04</small>
+          <strong data-i18n="step4Title">Special orders</strong>
+          <p data-i18n="step4Copy">Add meetings, events, training days or larger one-off orders separately.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sales">
+      <div class="section-head">
+        <h2 data-i18n="salesTitle">Sales playbook</h2>
+        <p data-i18n="salesIntro">What the team should say, what it should protect, and what it should avoid promising.</p>
+      </div>
+
+      <div class="sales-grid">
+        <div class="rules">
+          <h3 data-i18n="rulesTitle">Rules for every deal</h3>
+
+          <div class="rule">
+            <div class="rule-num">1</div>
+            <p data-i18n="rule1">Never promise the lowest rate based on expected future volume. The lower tier applies only when the volume exists.</p>
+          </div>
+
+          <div class="rule">
+            <div class="rule-num">2</div>
+            <p data-i18n="rule2">Pricing is progressive. Do not reprice all earlier meals at the cheapest tier when the order grows.</p>
+          </div>
+
+          <div class="rule">
+            <div class="rule-num">3</div>
+            <p data-i18n="rule3">AED 14 only applies after the first 40 meals/day have already moved through the higher tiers.</p>
+          </div>
+
+          <div class="rule">
+            <div class="rule-num">4</div>
+            <p data-i18n="rule4">Free pickup should always be offered. AED 5/day delivery assumes a standard local route and one location.</p>
+          </div>
+
+          <div class="rule">
+            <div class="rule-num">5</div>
+            <p data-i18n="rule5">Special proteins, extra portions, distant locations, multiple stops or special timing must be quoted separately.</p>
+          </div>
+        </div>
+
+        <div class="talk-track">
+          <h3 data-i18n="talkTitle">Opening talk track</h3>
+          <div class="script" data-i18n="talkScript">
+            “How many people would you realistically want to start with? We can begin from 10 meals a day, prove the service, and then reduce the average price as the order grows.”
+          </div>
+
+          <div class="talk-points">
+            <div class="talk-point">
+              <strong data-i18n="tp1Title">10 meals/day</strong>
+              <span data-i18n="tp1Copy">Pilot or small staff group.</span>
+            </div>
+            <div class="talk-point">
+              <strong data-i18n="tp2Title">20 meals/day</strong>
+              <span data-i18n="tp2Copy">Strong first target for a recurring business account.</span>
+            </div>
+            <div class="talk-point">
+              <strong data-i18n="tp3Title">30 meals/day</strong>
+              <span data-i18n="tp3Copy">Good account with AED 15.50 average meal price.</span>
+            </div>
+            <div class="talk-point">
+              <strong data-i18n="tp4Title">40+ meals/day</strong>
+              <span data-i18n="tp4Copy">Expansion account across larger teams or departments.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="economics">
+      <div class="section-head">
+        <h2 data-i18n="econTitle">Internal economics</h2>
+        <p data-i18n="econIntro">For management and sales leadership. Based on AED 9 variable cost per meal and 26 service days. Delivery fee is excluded from contribution here because actual delivery cost should be tracked separately.</p>
+      </div>
+
+      <div class="economics">
+        <div class="econ-card">
+          <small data-i18n="econ1Small">10 meals/day</small>
+          <strong>AED 1,820</strong>
+          <span data-i18n="econ1Copy">Monthly contribution before fixed overhead: 260 meals × (AED 16 − AED 9).</span>
+        </div>
+
+        <div class="econ-card">
+          <small data-i18n="econ2Small">20 meals/day</small>
+          <strong>AED 3,510</strong>
+          <span data-i18n="econ2Copy">Monthly contribution: AED 8,190 meal revenue − AED 4,680 variable meal cost.</span>
+        </div>
+
+        <div class="econ-card">
+          <small data-i18n="econ3Small">30 meals/day</small>
+          <strong>AED 5,070</strong>
+          <span data-i18n="econ3Copy">Monthly contribution: AED 12,090 meal revenue − AED 7,020 variable meal cost.</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <strong>24 DIET</strong> · <span data-i18n="footerText">B2B Meal Partnership · Internal Sales Page</span>
+      </div>
+      <button class="print-btn" type="button" onclick="window.print()" data-i18n="printBtn">Print / Save PDF</button>
+    </footer>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        brandSub:"B2B Meal Partnership",
+        navPitch:"Pitch", navPricing:"Pricing", navOffer:"Offer", navSales:"Sales Playbook", navEconomics:"Economics",
+        heroEyebrow:"Business Meal Partnership",
+        heroTitle:"Start small.<br>Feed your team.<br>Grow when it works.",
+        heroCopy:"A simple daily meal program for companies, offices, gyms, clinics, academies, workshops, retail teams and other businesses. Low starting commitment, predictable monthly spend, and better pricing as real volume grows.",
+        tag1:"10 meals/day minimum", tag2:"26 service days", tag3:"Progressive pricing", tag4:"Pickup free",
+        startCommitment:"Starting commitment",
+        startCommitmentNote:"Meals per day. Small enough for a pilot, large enough to create a useful recurring account.",
+        startPrice:"Starting price",
+        startPriceNote:"Per meal for the first 10 meals. Additional volume receives progressively better pricing.",
+        pitchTitle:"The pitch",
+        pitchIntro:"Lead with flexibility and affordability — not a large catering commitment.",
+        quote:"“Start with just 10 meals a day. We prove the service first, then your average price improves as your team order grows.”",
+        easyApprove:"Easy to approve.",
+        easyApproveNote:"No need to commit to a large order from day one. Start with the people who need it most and expand through usage.",
+        benefit1Title:"Low starting risk", benefit1Copy:"Begin with 10 meals/day instead of forcing an unrealistic company-wide commitment.",
+        benefit2Title:"Predictable budget", benefit2Copy:"Know the daily and monthly meal spend before approving the program.",
+        benefit3Title:"Better price with growth", benefit3Copy:"Only additional meals receive the lower price, keeping the pricing fair and sustainable.",
+        benefit4Title:"Simple operating model", benefit4Copy:"Agreed menu, predictable quantities and clear pickup or delivery rules.",
+        whoTitle:"Who this works for",
+        whoIntro:"The same offer can be used across businesses that need a simple recurring meal solution for a team or staff group.",
+        industry1:"Offices", industry1Sub:"Daily staff meals",
+        industry2:"Gyms", industry2Sub:"Members + staff",
+        industry3:"Clinics", industry3Sub:"Staff catering",
+        industry4:"Academies", industry4Sub:"Students + staff",
+        industry5:"Workshops", industry5Sub:"Shift teams",
+        industry6:"Retail Teams", industry6Sub:"Store staff",
+        industry7:"Warehouses", industry7Sub:"Operations teams",
+        industry8:"Sports Clubs", industry8Sub:"Players + staff",
+        pricingTitle:"Progressive pricing",
+        pricingIntro:"The customer gets rewarded for growth without making additional volume less profitable for 24 DIET.",
+        thTier:"Daily tier", thApplied:"Applied to", thPrice:"Price / meal",
+        tier1Name:"Base", tier1Applied:"First 10 meals",
+        tier2Name:"Growth", tier2Applied:"Meals 11–20",
+        tier3Name:"Team", tier3Applied:"Meals 21–30",
+        tier4Name:"Expanded", tier4Applied:"Meals 31–40",
+        tier5Name:"Scale", tier5Applied:"Meals 41+",
+        calcTitle:"Business quote calculator",
+        calcIntro:"Enter the expected daily meals and choose pickup or delivery. Pricing is calculated progressively.",
+        labelMeals:"Meals per day", labelDelivery:"Fulfilment", labelStops:"Delivery stops",
+        pickupOption:"Pickup — Free", deliveryOption:"Standard delivery",
+        dailyMealTotal:"Daily meals total", averageMeal:"Average / meal", deliveryFee:"Delivery / day",
+        monthlyQuote:"26-day monthly quote", monthlyMeals:"Meals / month", monthlyDelivery:"Delivery / month",
+        deliveryPolicyShort:"Pickup is free. Standard local delivery is AED 5 per service day per location. Additional stops are AED 5 each per day. Outside the standard area or special delivery timing is quoted separately.",
+        offerTitle:"What the customer receives",
+        offerIntro:"Keep the product disciplined. This is a recurring business meal program, not a fully customized restaurant order.",
+        offer1Title:"Protein", offer1Copy:"Controlled portion built around simple, repeatable proteins suitable for efficient bulk production.",
+        offer2Title:"Carbohydrate", offer2Copy:"Rice, pasta, potatoes or another planned carbohydrate base depending on the menu rotation.",
+        offer3Title:"Rotating menu", offer3Copy:"A controlled weekly rotation keeps the offer practical without adding unnecessary complexity.",
+        offer4Title:"Flexible fulfilment", offer4Copy:"Customer pickup is free. Standard delivery can be added for AED 5 per service day per location.",
+        deliveryTitle:"Delivery policy",
+        deliveryIntro:"Keep delivery simple enough to sell, but controlled enough that logistics do not quietly erase the meal margin.",
+        deliveryType:"Option", deliveryRule:"Commercial rule",
+        pickupRow:"Customer pickup", pickupFree:"Free",
+        standardDeliveryRow:"Standard local delivery", standardDeliveryRule:"AED 5 per service day for one location",
+        extraStopRow:"Additional location / stop", extraStopRule:"+ AED 5 per service day per additional stop",
+        specialDeliveryRow:"Outside area / special timing", specialDeliveryRule:"Quoted separately",
+        growthTitle:"How the account should grow",
+        growthIntro:"Build usage after the service is proven instead of asking for a large commitment at the first meeting.",
+        step1Small:"Step 01", step1Title:"Pilot", step1Copy:"Start with 10–20 people and prove quality, timing and reliability.",
+        step2Small:"Step 02", step2Title:"Core team", step2Copy:"Add more employees, members or staff once the first group is satisfied.",
+        step3Small:"Step 03", step3Title:"More departments", step3Copy:"Expand to another shift, department, branch or staff group.",
+        step4Small:"Step 04", step4Title:"Special orders", step4Copy:"Add meetings, events, training days or larger one-off orders separately.",
+        salesTitle:"Sales playbook",
+        salesIntro:"What the team should say, what it should protect, and what it should avoid promising.",
+        rulesTitle:"Rules for every deal",
+        rule1:"Never promise the lowest rate based on expected future volume. The lower tier applies only when the volume exists.",
+        rule2:"Pricing is progressive. Do not reprice all earlier meals at the cheapest tier when the order grows.",
+        rule3:"AED 14 only applies after the first 40 meals/day have already moved through the higher tiers.",
+        rule4:"Free pickup should always be offered. AED 5/day delivery assumes a standard local route and one location.",
+        rule5:"Special proteins, extra portions, distant locations, multiple stops or special timing must be quoted separately.",
+        talkTitle:"Opening talk track",
+        talkScript:"“How many people would you realistically want to start with? We can begin from 10 meals a day, prove the service, and then reduce the average price as the order grows.”",
+        tp1Title:"10 meals/day", tp1Copy:"Pilot or small staff group.",
+        tp2Title:"20 meals/day", tp2Copy:"Strong first target for a recurring business account.",
+        tp3Title:"30 meals/day", tp3Copy:"Good account with AED 15.50 average meal price.",
+        tp4Title:"40+ meals/day", tp4Copy:"Expansion account across larger teams or departments.",
+        econTitle:"Internal economics",
+        econIntro:"For management and sales leadership. Based on AED 9 variable cost per meal and 26 service days. Delivery fee is excluded from contribution here because actual delivery cost should be tracked separately.",
+        econ1Small:"10 meals/day", econ1Copy:"Monthly contribution before fixed overhead: 260 meals × (AED 16 − AED 9).",
+        econ2Small:"20 meals/day", econ2Copy:"Monthly contribution: AED 8,190 meal revenue − AED 4,680 variable meal cost.",
+        econ3Small:"30 meals/day", econ3Copy:"Monthly contribution: AED 12,090 meal revenue − AED 7,020 variable meal cost.",
+        footerText:"B2B Meal Partnership · Internal Sales Page",
+        printBtn:"Print / Save PDF"
+      },
+      ar: {
+        brandSub:"شراكة وجبات للشركات",
+        navPitch:"العرض", navPricing:"الأسعار", navOffer:"الخدمة", navSales:"دليل المبيعات", navEconomics:"الجدوى",
+        heroEyebrow:"شراكة وجبات للشركات",
+        heroTitle:"ابدأ بشكل بسيط.<br>وفّر الوجبات لفريقك.<br>وتوسع عندما ينجح البرنامج.",
+        heroCopy:"برنامج وجبات يومي بسيط للشركات والمكاتب والنوادي الرياضية والعيادات والأكاديميات والورش وفرق التجزئة وغيرها من جهات العمل. التزام مبدئي منخفض، تكلفة شهرية واضحة، وسعر أفضل كلما زاد الحجم الفعلي.",
+        tag1:"الحد الأدنى 10 وجبات يومياً", tag2:"26 يوم خدمة", tag3:"تسعير تدريجي", tag4:"الاستلام مجاناً",
+        startCommitment:"الحد الأدنى للبدء",
+        startCommitmentNote:"10 وجبات يومياً. عدد مناسب لتجربة الخدمة والبدء بحساب متكرر بدون التزام كبير.",
+        startPrice:"سعر البداية",
+        startPriceNote:"لكل وجبة لأول 10 وجبات. الكميات الإضافية تحصل على سعر أفضل بشكل تدريجي.",
+        pitchTitle:"فكرة العرض",
+        pitchIntro:"نبيع المرونة والسعر المناسب أولاً — وليس عقد تموين كبير من أول يوم.",
+        quote:"“ابدأ بـ10 وجبات فقط يومياً. نثبت جودة الخدمة أولاً، وبعدها ينخفض متوسط السعر كلما زاد طلب فريقك.”",
+        easyApprove:"سهل الاعتماد.",
+        easyApproveNote:"لا حاجة لطلب كبير من البداية. يمكن البدء بالمجموعة الأكثر احتياجاً ثم التوسع حسب الاستخدام.",
+        benefit1Title:"مخاطرة أقل عند البداية", benefit1Copy:"ابدأ بـ10 وجبات يومياً بدلاً من فرض التزام كبير على كامل الشركة.",
+        benefit2Title:"ميزانية واضحة", benefit2Copy:"تعرف تكلفة الوجبات اليومية والشهرية قبل اعتماد البرنامج.",
+        benefit3Title:"سعر أفضل مع النمو", benefit3Copy:"الوجبات الإضافية فقط تحصل على السعر الأقل، حتى يبقى التسعير عادلاً ومستداماً.",
+        benefit4Title:"تشغيل بسيط", benefit4Copy:"قائمة متفق عليها، كميات واضحة، وقواعد واضحة للاستلام أو التوصيل.",
+        whoTitle:"مناسب لأي نوع من الأعمال؟",
+        whoIntro:"يمكن استخدام نفس العرض مع أي جهة تحتاج حلاً بسيطاً ومتكرراً للوجبات لفريق أو مجموعة من الموظفين.",
+        industry1:"المكاتب", industry1Sub:"وجبات يومية للموظفين",
+        industry2:"النوادي الرياضية", industry2Sub:"الأعضاء والموظفون",
+        industry3:"العيادات", industry3Sub:"وجبات للموظفين",
+        industry4:"الأكاديميات", industry4Sub:"الطلاب والموظفون",
+        industry5:"الورش", industry5Sub:"فرق الشفتات",
+        industry6:"فرق التجزئة", industry6Sub:"موظفو الفروع",
+        industry7:"المستودعات", industry7Sub:"فرق التشغيل",
+        industry8:"الأندية الرياضية", industry8Sub:"اللاعبون والموظفون",
+        pricingTitle:"التسعير التدريجي",
+        pricingIntro:"العميل يحصل على سعر أفضل مع زيادة الطلب، بدون أن تصبح الكمية الإضافية أقل ربحية على 24 DIET.",
+        thTier:"الشريحة اليومية", thApplied:"تطبق على", thPrice:"سعر الوجبة",
+        tier1Name:"البداية", tier1Applied:"أول 10 وجبات",
+        tier2Name:"النمو", tier2Applied:"من الوجبة 11 إلى 20",
+        tier3Name:"الفريق", tier3Applied:"من الوجبة 21 إلى 30",
+        tier4Name:"التوسع", tier4Applied:"من الوجبة 31 إلى 40",
+        tier5Name:"الحجم الكبير", tier5Applied:"من الوجبة 41 فما فوق",
+        calcTitle:"حاسبة عرض الشركة",
+        calcIntro:"أدخل عدد الوجبات اليومية واختر الاستلام أو التوصيل. يتم احتساب السعر تدريجياً حسب الشرائح.",
+        labelMeals:"عدد الوجبات يومياً", labelDelivery:"طريقة الاستلام", labelStops:"عدد مواقع التوصيل",
+        pickupOption:"استلام من 24 DIET — مجاناً", deliveryOption:"توصيل عادي",
+        dailyMealTotal:"قيمة الوجبات اليومية", averageMeal:"متوسط سعر الوجبة", deliveryFee:"التوصيل يومياً",
+        monthlyQuote:"الإجمالي الشهري لـ26 يوم", monthlyMeals:"الوجبات شهرياً", monthlyDelivery:"التوصيل شهرياً",
+        deliveryPolicyShort:"الاستلام مجاني. التوصيل المحلي العادي 5 دراهم لكل يوم خدمة ولكل موقع. كل موقع إضافي 5 دراهم يومياً. التوصيل خارج المنطقة المعتادة أو في وقت خاص يتم تسعيره بشكل منفصل.",
+        offerTitle:"ماذا يحصل عليه العميل؟",
+        offerIntro:"نحافظ على المنتج بسيطاً ومنضبطاً. هذا برنامج وجبات متكرر للأعمال، وليس طلب مطعم مخصص بالكامل.",
+        offer1Title:"بروتين", offer1Copy:"حصة بروتين مدروسة تعتمد على خيارات بسيطة وقابلة للتكرار ومناسبة للإنتاج بالكميات.",
+        offer2Title:"كربوهيدرات", offer2Copy:"أرز أو باستا أو بطاطا أو قاعدة كربوهيدرات أخرى حسب دورة القائمة.",
+        offer3Title:"قائمة متغيرة", offer3Copy:"دورة أسبوعية محددة تحافظ على التنوع بدون تعقيد غير ضروري.",
+        offer4Title:"استلام مرن", offer4Copy:"الاستلام من 24 DIET مجاني، ويمكن إضافة التوصيل العادي مقابل 5 دراهم لكل يوم خدمة ولكل موقع.",
+        deliveryTitle:"سياسة التوصيل",
+        deliveryIntro:"نحافظ على التوصيل بسيطاً للبيع، لكن مضبوطاً حتى لا تأكل تكلفة اللوجستيات هامش ربح الوجبات.",
+        deliveryType:"الخيار", deliveryRule:"القاعدة التجارية",
+        pickupRow:"استلام العميل", pickupFree:"مجاناً",
+        standardDeliveryRow:"توصيل محلي عادي", standardDeliveryRule:"5 دراهم لكل يوم خدمة لموقع واحد",
+        extraStopRow:"موقع / محطة إضافية", extraStopRule:"+5 دراهم لكل يوم خدمة لكل موقع إضافي",
+        specialDeliveryRow:"خارج المنطقة / توقيت خاص", specialDeliveryRule:"يتم التسعير بشكل منفصل",
+        growthTitle:"كيف ينمو الحساب؟",
+        growthIntro:"نزيد الاستخدام بعد إثبات الخدمة بدلاً من طلب التزام كبير في أول اجتماع.",
+        step1Small:"الخطوة 01", step1Title:"تجربة", step1Copy:"ابدأ بـ10–20 شخصاً وأثبت الجودة والالتزام بالوقت وثبات الخدمة.",
+        step2Small:"الخطوة 02", step2Title:"الفريق الأساسي", step2Copy:"أضف موظفين أو أعضاء أكثر بعد رضا المجموعة الأولى.",
+        step3Small:"الخطوة 03", step3Title:"أقسام إضافية", step3Copy:"توسع إلى شفت أو قسم أو فرع أو مجموعة موظفين أخرى.",
+        step4Small:"الخطوة 04", step4Title:"طلبات خاصة", step4Copy:"أضف الاجتماعات والفعاليات وأيام التدريب أو الطلبات الكبيرة بشكل منفصل.",
+        salesTitle:"دليل فريق المبيعات",
+        salesIntro:"ما الذي يجب أن يقوله الفريق، وما الذي يجب حمايته، وما الذي لا يجب الوعد به.",
+        rulesTitle:"قواعد كل صفقة",
+        rule1:"لا تعطِ أقل سعر بناءً على حجم متوقع في المستقبل. السعر الأقل يطبق فقط عندما تتحقق الكمية فعلياً.",
+        rule2:"التسعير تدريجي. لا تعِد تسعير كل الوجبات السابقة على أقل شريحة عندما يزيد الطلب.",
+        rule3:"سعر 14 درهماً يطبق فقط بعد مرور أول 40 وجبة يومياً عبر الشرائح الأعلى.",
+        rule4:"يجب دائماً توفير خيار الاستلام المجاني. توصيل 5 دراهم يومياً يفترض مساراً محلياً عادياً وموقعاً واحداً.",
+        rule5:"البروتينات الخاصة والحصص الإضافية والمواقع البعيدة وتعدد المواقع أو التوقيت الخاص يتم تسعيرها بشكل منفصل.",
+        talkTitle:"افتتاحية المبيعات",
+        talkScript:"“كم شخصاً تريدون أن تبدأوا بهم بشكل واقعي؟ يمكن أن نبدأ من 10 وجبات يومياً، نثبت الخدمة أولاً، وبعدها ينخفض متوسط السعر كلما زاد الطلب.”",
+        tp1Title:"10 وجبات يومياً", tp1Copy:"تجربة أو مجموعة صغيرة من الموظفين.",
+        tp2Title:"20 وجبة يومياً", tp2Copy:"هدف أول ممتاز لحساب تجاري متكرر.",
+        tp3Title:"30 وجبة يومياً", tp3Copy:"حساب جيد بمتوسط 15.50 درهماً للوجبة.",
+        tp4Title:"40+ وجبة يومياً", tp4Copy:"حساب متوسع عبر فرق أو أقسام أكبر.",
+        econTitle:"الجدوى الداخلية",
+        econIntro:"للإدارة وقيادة المبيعات. مبني على تكلفة متغيرة 9 دراهم للوجبة و26 يوم خدمة. رسوم التوصيل غير محسوبة ضمن المساهمة هنا لأن تكلفة التوصيل الفعلية يجب متابعتها بشكل منفصل.",
+        econ1Small:"10 وجبات يومياً", econ1Copy:"المساهمة الشهرية قبل التكاليف الثابتة: 260 وجبة × (16 − 9 دراهم).",
+        econ2Small:"20 وجبة يومياً", econ2Copy:"المساهمة الشهرية: 8,190 درهماً إيراد وجبات − 4,680 درهماً تكلفة متغيرة.",
+        econ3Small:"30 وجبة يومياً", econ3Copy:"المساهمة الشهرية: 12,090 درهماً إيراد وجبات − 7,020 درهماً تكلفة متغيرة.",
+        footerText:"شراكة وجبات للشركات · صفحة مبيعات داخلية",
+        printBtn:"طباعة / حفظ PDF"
+      }
+    };
+
+    const tiers = [
+      { qty: 10, price: 16.00 },
+      { qty: 10, price: 15.50 },
+      { qty: 10, price: 15.00 },
+      { qty: 10, price: 14.50 },
+      { qty: Infinity, price: 14.00 }
+    ];
+
+    function quoteForMeals(meals){
+      let remaining = Math.max(0, Number(meals) || 0);
+      let total = 0;
+
+      for(const tier of tiers){
+        if(remaining <= 0) break;
+        const units = Math.min(remaining, tier.qty);
+        total += units * tier.price;
+        remaining -= units;
+      }
+      return total;
+    }
+
+    function money(value, decimals = 0){
+      return "AED " + Number(value).toLocaleString("en-AE", {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      });
+    }
+
+    function updateCalculator(){
+      const input = document.getElementById("mealCount");
+      const meals = Math.max(1, Math.floor(Number(input.value) || 1));
+      input.value = meals;
+
+      const dailyMeals = quoteForMeals(meals);
+      const mode = document.getElementById("deliveryMode").value;
+      const stopsInput = document.getElementById("deliveryStops");
+      let stops = Math.max(1, Math.floor(Number(stopsInput.value) || 1));
+      stopsInput.value = stops;
+
+      const dailyDelivery = mode === "delivery" ? 5 * stops : 0;
+      const monthlyMealRevenue = dailyMeals * 26;
+      const monthlyDelivery = dailyDelivery * 26;
+      const monthlyTotal = monthlyMealRevenue + monthlyDelivery;
+      const avg = dailyMeals / meals;
+
+      document.getElementById("dailyMealTotalValue").textContent = money(dailyMeals, dailyMeals % 1 ? 2 : 0);
+      document.getElementById("avgPrice").textContent = money(avg, 2);
+      document.getElementById("deliveryDaily").textContent = money(dailyDelivery, 0);
+      document.getElementById("monthlyTotal").textContent = money(monthlyTotal, monthlyTotal % 1 ? 2 : 0);
+      document.getElementById("monthlyMeals").textContent = (meals * 26).toLocaleString("en-AE");
+      document.getElementById("monthlyDelivery").textContent = money(monthlyDelivery, 0);
+
+      stopsInput.disabled = mode !== "delivery";
+      stopsInput.style.opacity = mode === "delivery" ? "1" : ".45";
+    }
+
+    function setLanguage(lang){
+      const isAr = lang === "ar";
+      document.documentElement.setAttribute("lang", lang);
+      document.documentElement.setAttribute("dir", isAr ? "rtl" : "ltr");
+      document.documentElement.setAttribute("data-lang", lang);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(translations[lang][key] !== undefined){
+          if(key === "heroTitle"){
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+
+      document.getElementById("langEn").classList.toggle("active", !isAr);
+      document.getElementById("langAr").classList.toggle("active", isAr);
+
+      const pickupOption = document.querySelector('#deliveryMode option[value="pickup"]');
+      const deliveryOption = document.querySelector('#deliveryMode option[value="delivery"]');
+      pickupOption.textContent = translations[lang].pickupOption;
+      deliveryOption.textContent = translations[lang].deliveryOption;
+
+      updateCalculator();
+    }
+
+    document.getElementById("mealCount").addEventListener("input", updateCalculator);
+    document.getElementById("deliveryMode").addEventListener("change", updateCalculator);
+    document.getElementById("deliveryStops").addEventListener("input", updateCalculator);
+
+    document.querySelectorAll("[data-meals]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("mealCount").value = btn.dataset.meals;
+        updateCalculator();
+      });
+    });
+
+    document.getElementById("langEn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("langAr").addEventListener("click", () => setLanguage("ar"));
+
+    setLanguage("en");
+  </script>
+</body>
+</html>
