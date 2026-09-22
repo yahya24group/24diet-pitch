@@ -854,20 +854,38 @@
 
     @media (max-width: 620px){
       .page{padding:10px}
-      .topbar{align-items:flex-start;flex-direction:column}
-      .top-actions{justify-content:flex-start}
+      .topbar{align-items:flex-start;flex-direction:column;padding:12px}
+      .top-actions{justify-content:flex-start;width:100%}
       .nav{justify-content:flex-start}
-      .hero-main{min-height:auto;padding:28px}
+      .nav a,.lang-switch button,.quick-buttons button{min-height:40px;display:inline-flex;align-items:center;font-size:13px}
+      .lang-switch{margin-left:auto}
+      .hero-main{min-height:auto;padding:24px 20px}
       .hero-side{grid-template-columns:1fr}
-      h1{font-size:46px}
-      [dir="rtl"] h1{font-size:42px}
-      .section{padding:20px}
-      .offer-grid,.steps,.industry-grid,.economics,.talk-points,.calc-grid,.delivery-row{grid-template-columns:1fr}
+      .hero-card{padding:20px}
       .hero-number{font-size:44px}
+      h1{font-size:40px}
+      [dir="rtl"] h1{font-size:36px}
+      .hero-main p,.section-head p,.offer-card p,.step p,.hero-note,.talk-point,.delivery-note,td{font-size:14px}
+      .section{padding:18px 14px}
+      .section-head h2{font-size:24px}
+      .offer-grid,.steps,.economics,.talk-points,.delivery-row{grid-template-columns:1fr}
+      .industry-grid,.calc-grid{grid-template-columns:1fr 1fr}
+      .industry{min-height:84px;padding:14px}
+      .industry strong{font-size:14px}
+      .offer-card{min-height:auto;padding:16px}
+      .offer-icon{margin-bottom:12px}
+      .calc{padding:18px}
+      .calc-metric{min-height:auto}
+      .calc-metric strong{font-size:20px}
+      .quick-buttons button{flex:1}
       th,td{padding:12px 10px}
-      .pitch-copy,.pitch-note{padding:22px}
-      .pitch-copy .quote{font-size:23px}
+      .price{font-size:16px}
+      .tier-dot{width:24px;height:24px;margin-right:6px}
+      [dir="rtl"] .tier-dot{margin-left:6px}
+      .pitch-copy,.pitch-note{padding:20px}
+      .pitch-copy .quote{font-size:21px}
       .footer{align-items:flex-start;flex-direction:column}
+      .print-btn{min-height:44px;width:100%}
     }
 
     @media print{
